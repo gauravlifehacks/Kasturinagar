@@ -2,13 +2,23 @@
   "appId": "com.badiyo.kasturinagar",
   "appName": "Kasturi Nagar",
   "webDir": "www",
-  "backgroundColor": "#F2F4FB",
+  "backgroundColor": "#FDDA01",
   "server": {
     "url": "https://kasturinagar.badiyo.com",
     "cleartext": false
   },
   "android": {
-    "backgroundColor": "#F2F4FB",
+    "backgroundColor": "#FDDA01",
     "allowMixedContent": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1800,
+      "launchAutoHide": true,
+      "launchFadeOutDuration": 300,
+      "backgroundColor": "#FDDA01",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false
+    }
   }
 }

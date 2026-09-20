@@ -5,7 +5,8 @@
   "description": "Kasturi Nagar society directory - Android app (WebView wrapper)",
   "dependencies": {
     "@capacitor/android": "^6.2.0",
-    "@capacitor/core": "^6.2.0"
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/splash-screen": "^6.0.0"
   },
   "devDependencies": {
     "@capacitor/assets": "^3.0.5",
