@@ -37,6 +37,14 @@ jobs:
       - name: Make app icons and splash screen
         run: npx capacitor-assets generate --android
 
+      - name: Yellow splash screen for Android 12 and above
+        run: |
+          mkdir -p android/app/src/main/res/drawable-nodpi
+          cp assets/icon-foreground.png android/app/src/main/res/drawable-nodpi/splash_icon.png
+          sed -i 's|<item name="android:background">@drawable/splash</item>|<item name="android:background">@drawable/splash</item>\n        <item name="windowSplashScreenBackground">#FDDA01</item>\n        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon</item>|' android/app/src/main/res/values/styles.xml
+          grep -n "windowSplashScreen" android/app/src/main/res/values/styles.xml
+          test "$(grep -c windowSplashScreenAnimatedIcon android/app/src/main/res/values/styles.xml)" = "1"
+
       - name: Sync
         run: npx cap sync android
 
