@@ -1,0 +1,14 @@
+{
+  "appId": "com.badiyo.kasturinagar",
+  "appName": "Kasturi Nagar",
+  "webDir": "www",
+  "backgroundColor": "#F2F4FB",
+  "server": {
+    "url": "https://kasturinagar.badiyo.com",
+    "cleartext": false
+  },
+  "android": {
+    "backgroundColor": "#F2F4FB",
+    "allowMixedContent": false
+  }
+}
